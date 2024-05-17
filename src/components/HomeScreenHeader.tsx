@@ -6,12 +6,6 @@ import {
   Popcorn,
 } from "lucide-react-native";
 import { Link } from "expo-router";
-import {
-  GoogleSignin,
-  GoogleSigninButton,
-  statusCodes,
-} from "@react-native-google-signin/google-signin";
-import { useEffect, useState } from "react";
 
 const HomeScreenHeader = () => {
   return (

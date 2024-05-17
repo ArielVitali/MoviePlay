@@ -13,8 +13,8 @@ const LoginPage = () => {
   console.log(usePathname());
   const [userInfo, setUserInfo] = useState(null);
   const [request, response, promptAsync] = Google.useAuthRequest({
-    androidClientId: "",
-    webClientId: "",
+    androidClientId:
+      "323845197177-d03ustrqi988dlr40166aug0u2q4g1e7.apps.googleusercontent.com",
     iosClientId:
       "323845197177-l0b8vmuo07hbai5q38b5heotnbnbh02n.apps.googleusercontent.com",
   });
@@ -74,7 +74,10 @@ const LoginPage = () => {
       )}
       <Button
         title="Remove local store"
-        onPress={async () => await AsyncStorage.removeItem("@user")}
+        onPress={async () => {
+          await AsyncStorage.removeItem("@user");
+          console.log("Removed");
+        }}
       />
     </View>
   );
